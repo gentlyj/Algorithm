@@ -18,7 +18,6 @@ public class MergeSort {
         if (l >= r) {
             return;
         }
-
         int mid = (l + r) / 2;
         sortArray(arr, l, mid, temp);
         sortArray(arr, mid + 1, r, temp);
