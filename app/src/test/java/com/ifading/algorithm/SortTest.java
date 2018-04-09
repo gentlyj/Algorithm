@@ -1,6 +1,7 @@
 package com.ifading.algorithm;
 
 import com.ifading.algorithm.sort.FastSort;
+import com.ifading.algorithm.sort.InsertionSort;
 
 import org.junit.Test;
 
@@ -14,8 +15,9 @@ public class SortTest {
 
     @Test
     public void testMergeSort(){
-        int[] ints = TestDataGenerater.generateRandomArrays(0, 100, 100);
-        //MergeSort.sortArray(ints);
-        FastSort.sortArray(ints);
+        int[] arr = TestDataGenerater.generateRandomArrays(0, 100, 5);
+        //MergeSort.sortArray(arr);
+        //FastSort.sortArray(arr);
+        InsertionSort.sortArray(arr);
     }
 }
