@@ -1,6 +1,8 @@
 package com.ifading.algorithm.sort;
 
 
+import java.util.Arrays;
+
 /**
  * Created  on 20180408//.
  *
@@ -11,6 +13,7 @@ public class MergeSort {
     public static void sortArray(int[] arr) {
         int[] temp = new int[arr.length];
         sortArray(arr, 0, arr.length - 1, temp);
+        System.out.println("arr:" + Arrays.toString(arr));
     }
 
 
@@ -27,10 +30,11 @@ public class MergeSort {
 
     /**
      * 分治,把两个有序的数组合并为一个有序的数组
-     * @param arr 待排序数组
-     * @param l 左闭 index
-     * @param mid 中间 index,视为两个数组的分界,第一数组为[l, mid],第二个数组为[mid+1,r]
-     * @param r 右闭 idnex
+     *
+     * @param arr  待排序数组
+     * @param l    左闭 index
+     * @param mid  中间 index,视为两个数组的分界,第一数组为[l, mid],第二个数组为[mid+1,r]
+     * @param r    右闭 idnex
      * @param temp 临时数组,用来放置排序好的数组
      */
     private static void merge(int[] arr, int l, int mid, int r, int[] temp) {
